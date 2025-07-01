@@ -1,0 +1,196 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe0f0 0%, #f5e9ff 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup {
+  background: #fff0f7;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px #e7548055, 0 1px 8px #f8b6d2aa;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.neon-border {
+  box-shadow: 0 0 16px 4px #ff4fa5, 0 0 32px 8px #ffb6f9, 0 0 8px 2px #fff0f7;
+  border: 2.5px solid #ff4fa5;
+  border-radius: 2.5rem;
+  padding: 2rem 2.5rem;
+}
+
+.neon-text {
+  color: #ff4fa5;
+  text-shadow: 0 0 6px #ff4fa5, 0 0 12px #ffb6f9, 0 0 18px #fff0f7;
+  font-family: 'Neon Tubes', 'Dancing Script', cursive;
+}
+
+.emoji {
+  font-size: 1.3em;
+  filter: drop-shadow(0 0 4px #ffb6f9);
+  margin: 0 0.1em;
+}
+
+.neon-btn {
+  box-shadow: 0 0 12px 2px #ff4fa5, 0 0 24px 4px #ffb6f9;
+  border: 2px solid #ff4fa5;
+  background: linear-gradient(90deg, #ff6f91, #ffb6f9);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.neon-btn:active, .neon-btn:focus {
+  background: linear-gradient(90deg, var(--main-red), var(--main-pink));
+  box-shadow: 0 0 20px 4px var(--main-red);
+  outline: none;
+}
+
+.popup-content h2 {
+  font-family: var(--love-font);
+  color: var(--main-red);
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.love-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.yes-btn, .no-btn {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.7rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(184, 50, 96, 0.13);
+  background: linear-gradient(90deg, #ff6f91, #ff9472);
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.yes-btn {
+  background: linear-gradient(90deg, #ffb347, #e75480); /* peach to pink */
+}
+
+.no-btn {
+  background: linear-gradient(90deg, #a259c6, #e75480); /* purple to pink */
+}
+
+.yes-btn:active,
+.no-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 20px 4px var(--main-red);
+  color: black;
+}
+
+/* Main welcome container */
+.welcome {
+  text-align: center;
+  padding: 2.2rem 2.7rem 2rem 2.7rem;
+  background: var(--accent);
+  color: var(--main-red);
+  border-radius: 2.5rem;
+  max-width: 480px;
+  margin: 2.5rem auto 1.5rem auto;
+  box-shadow: var(--shadow);
+  font-family: var(--love-font);
+  animation: fadeInUp 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure Next button stays inside the welcome box */
+.welcome .next-btn.neon-btn {
+  display: block;
+  border: solid 2px #ff4fa5;
+  background-color: #a259c6;
+  margin: 20px auto 0 auto;
+  align-self: center;
+}
+
+
+/* Neon-style heading and text */
+.neon-text {
+  font-family: var(--love-font);
+  font-size: 1.4rem;
+  color: var(--main-red);
+  text-shadow:
+    0 0 7px #fff,
+    0 0 16px var(--main-pink),
+    0 0 24px var(--main-red);
+  margin-bottom: 1.1rem;
+}
+
+/* Emoji inside text */
+.emoji {
+  font-size: 1.5rem;
+}
+
+/* Couple image styling */
+.welcome-img {
+  width: 70%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  margin: 10px auto 20px;
+  display: block;
+ 
+  animation: popIn 1s ease-out;
+}
+
+/* Next button styling */
+.next-btn.neon-btn {
+  margin-top: 15px;
+  background: linear-gradient(90deg, var(--main-pink), var(--main-red));
+  border: none;
+  color: #fff;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: var(--main-font);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--main-red), 0 0 16px var(--main-pink);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.next-btn.neon-btn:hover {
+  background: linear-gradient(90deg, var(--main-red), var(--main-pink));
+  transform: scale(1.05);
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image pop animation */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

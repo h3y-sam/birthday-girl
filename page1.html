@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Me? - Birthday Surprise</title>
+  <meta name="theme-color" content="#e75480">
+  <link rel="stylesheet" href="page1.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neon+Tubes|Dancing+Script|Poppins:400,600&display=swap">
+</head>
+<body>
+  <div id="loveModal" class="love-modal active">
+    <div class="love-modal-content neon-border">
+      <div class="love-modal-header">
+        <h2 id="loveQuestion">Do you love me? <span class="emoji">💖</span></h2>
+      </div>
+      <div class="love-modal-actions">
+        <button id="loveYes" class="yes-btn neon-btn">Yes 😍💗</button>
+        <button id="loveNo" class="no-btn neon-btn">No 🙈😔</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="welcome neon-border" id="welcomePage" style="display:none;">
+    <h1 class="neon-text">Hi Amrita! <span class="emoji">🥰</span></h1>
+    <img src="https://png.pngtree.com/png-vector/20231229/ourmid/pngtree-cartoon-cute-valentines-day-couple-and-love-png-image_11311960.png" alt="Us Together" class="welcome-img" />
+    <p class="neon-text">Welcome to your birthday surprise journey! <span class="emoji">💖🎂✨</span></p>
+<br>
+    <button class="next-btn neon-btn">Next &rarr; 💌</button>
+  </div>
+  <audio id="burstSound" src="assets/burst.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="assets/music.mp3" preload="auto" loop></audio>
+  <script src="page1.js"></script>
+</body>
+</html>
